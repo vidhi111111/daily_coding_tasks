@@ -18,10 +18,11 @@ The main focus was to be understanding the tags, how to make form properly and t
 -Country and State(Dropdown)
 -Submit and Reset Button
 -Focus and hover effect
-  Tech used:
 
-  HTML
-  CSS
+  ### Tech used:
+
+  -HTML
+  -CSS
 
 ### What I have practiced 
 
