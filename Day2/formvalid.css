@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0 0 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+}
+
+.password-box input {
+    flex: 1;
+}
+
+.password-box button {
+    width: 45px;
+    margin-left: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terms input {
+    width: auto;
+}
+
+.terms label {
+    margin: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    opacity: 0.8;
+}
+
+#successMessage {
+    margin-top: 15px;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    form {
+        padding: 20px;
+    }
+}
