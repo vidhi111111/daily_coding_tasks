@@ -52,3 +52,29 @@ The Remember Me checkbox is currently part of the UI. Its actual functionality w
 Purpose
 
 The main purpose of this task was to strengthen my HTML, CSS, and responsive design fundamentals.
+
+# Day 2 Task
+
+### Task 1:
+ ## Registration Form validation
+ For day 2, I added JS validation to registration form.
+
+ ### Features I have added in it as required
+ - Name valid (more than 3 char)
+ - Email valid
+ - M.No
+ - pswd
+ - Confirm pswd
+ - T&C
+ - Error messages
+ - pswd show/hide
+ - Success Message
+
+## Tech used
+ - HTML
+ - CSS
+ - JS
+
+I have practiced how to validate forms, customize error messages,pswd Show/Hide and form submission handling.
+Thankyou.
+
