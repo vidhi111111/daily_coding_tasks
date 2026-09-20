@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="users.css">
+</head>
+
+<body>
+
+<main class="container">
+
+    <h1>User Management</h1>
+
+    <div class="search-box">
+        <label for="searchUser">Search User</label>
+        <input type="text" id="searchUser" placeholder="Search by name or email">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="userTableBody">
+        </tbody>
+    </table>
+
+</main>
+
+<div id="editModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Edit User</h2>
+
+        <form id="editForm">
+
+            <div class="form-group">
+                <label for="editName">Name</label>
+                <input type="text" id="editName">
+            </div>
+
+            <div class="form-group">
+                <label for="editEmail">Email</label>
+                <input type="email" id="editEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="editStatus">Status</label>
+                <select id="editStatus">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+
+            <div class="modal-buttons">
+                <button type="submit">Save</button>
+                <button type="button" id="closeModal">Cancel</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="users.js"></script>
+
+</body>
+</html>
