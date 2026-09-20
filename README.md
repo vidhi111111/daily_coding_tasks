@@ -78,3 +78,39 @@ The main purpose of this task was to strengthen my HTML, CSS, and responsive des
 I have practiced how to validate forms, customize error messages,pswd Show/Hide and form submission handling.
 Thankyou.
 
+# Day 3 Task
+
+Today I have made a user.html page containing Search user, Name, Email, Status and action.
+
+As required for the task i have not hard coded the values.
+I have used JS for it.
+
+JS ARRAY > Loop through Users > Create HTML > Table display
+
+## Search User
+
+I have added Search user also so the values i have inserted in the Js array will be seen here.
+
+We can search using :
+ - Name
+ - Email
+
+## Delete User
+
+I have added delete user.
+
+when click on delete user it ask for confirmation.
+Then it delete the user.
+
+## Edit User
+
+- open form
+- open existing user info
+- allow modification
+- save changes
+- Refresh Table
+
+This task helped me understand how JavaScript arrays and objects can be used with DOM manipulation to create dynamic user interfaces. I also practiced implementing search, edit, and delete functionality using JavaScript.
+
+
+
