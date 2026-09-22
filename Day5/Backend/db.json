@@ -1,0 +1,166 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "John Smith",
+      "email": "john.smith@gmail.com",
+      "mobile": "9876543210",
+      "department": "Engineering",
+      "joiningDate": "2026-01-12",
+      "status": "Active",
+      "projects": [
+        {
+          "id": 101,
+          "name": "Employee Portal",
+          "status": "In Progress"
+        },
+        {
+          "id": 102,
+          "name": "Payment Gateway",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "David Lee",
+      "email": "david.lee@gmail.com",
+      "mobile": "9876543211",
+      "department": "Finance",
+      "joiningDate": "2025-10-20",
+      "status": "Active",
+      "projects": [
+        {
+          "id": 103,
+          "name": "Finance Dashboard",
+          "status": "In Progress"
+        },
+        {
+          "id": 104,
+          "name": "Invoice Automation",
+          "status": "Active"
+        },
+        {
+          "id": 105,
+          "name": "Budget Tracker",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Sarah Khan",
+      "email": "sarah.khan@gmail.com",
+      "mobile": "9876543212",
+      "department": "HR",
+      "joiningDate": "2025-08-15",
+      "status": "Inactive",
+      "projects": [
+        {
+          "id": 106,
+          "name": "Employee Onboarding",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Michael Brown",
+      "email": "michael.brown@gmail.com",
+      "mobile": "9876543213",
+      "department": "Engineering",
+      "joiningDate": "2024-06-10",
+      "status": "Active",
+      "projects": [
+        {
+          "id": 107,
+          "name": "Mobile Application",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Emily Davis",
+      "email": "emily.davis@gmail.com",
+      "mobile": "9876543214",
+      "department": "Marketing",
+      "joiningDate": "2025-03-18",
+      "status": "Active",
+      "projects": []
+    },
+    {
+      "id": "7",
+      "name": "Olivia Martin",
+      "email": "olivia.martin@gmail.com",
+      "mobile": "9876543216",
+      "department": "HR",
+      "joiningDate": "2026-02-01",
+      "status": "Active",
+      "projects": []
+    },
+    {
+      "id": "8",
+      "name": "James Anderson",
+      "email": "james.anderson@gmail.com",
+      "mobile": "9876543217",
+      "department": "Finance",
+      "joiningDate": "2023-09-12",
+      "status": "Inactive",
+      "projects": [
+        {
+          "id": 110,
+          "name": "Audit Management",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "name": "Aditya Sharma",
+      "email": "sharma.johnson@gmail.com",
+      "mobile": "9876543200",
+      "department": "Engineering",
+      "joiningDate": "2026-09-22",
+      "status": "Active",
+      "id": "9",
+      "projects": []
+    },
+    {
+      "id": "10",
+      "name": "Daniel Thomas",
+      "email": "daniel.thomas@gmail.com",
+      "mobile": "9876543219",
+      "department": "Engineering",
+      "joiningDate": "2024-01-15",
+      "status": "Active",
+      "projects": [
+        {
+          "id": 113,
+          "name": "Backend Migration",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "name": "Arashad Ali",
+      "email": "ali.johnson@gmail.com",
+      "mobile": "9876543220",
+      "department": "Engineering",
+      "joiningDate": "2026-09-22",
+      "status": "Active",
+      "projects": [],
+      "id": "ivmKXB3tmTM"
+    },
+    {
+      "name": "vidhiiiiii",
+      "email": "vidhi123@gmail.com",
+      "mobile": "1234567868",
+      "department": "Finance",
+      "joiningDate": "2026-09-09",
+      "status": "Active",
+      "projects": [],
+      "id": "eY9YDwGWGkI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

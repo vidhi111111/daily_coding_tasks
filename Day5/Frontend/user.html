@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Jeebly</h2>
+            </div>
+
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Employees</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Employee Management Portal</h1>
+                    <p>Manage employees and their projects</p>
+                </div>
+
+                <div class="topbar-actions">
+                    <button id="themeToggle" class="theme-toggle">Dark Mode</button>
+                    <button class="add-btn" onclick="openAddModal()">+ Add Employee</button>
+                </div>
+            </header>s
+
+            <section class="dashboard">
+                <div class="card">
+                    <p>Total Employees</p>
+                    <h2 id="totalEmployees">0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Active Employees</p>
+                    <h2 id="activeEmployees">0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Active Projects</p>
+                    <h2 id="activeProjects">0</h2>
+                </div>
+
+                <div class="card">
+                    <p>Unassigned Employees</p>
+                    <h2 id="unassignedEmployees">0</h2>
+                </div>
+            </section>
+
+            <section class="employee-section">
+                <div class="section-header">
+                    <h2>Employees</h2>
+                    <p>View and manage all employees</p>
+                </div>
+
+                <div class="filters">
+                    <div class="search-box">
+                        <label>Search Employee</label>
+                        <input type="text" id="searchInput" placeholder="Search by name or email" oninput="applyFilters()">
+                    </div>
+
+                    <div>
+                        <label>Department</label>
+                        <select id="departmentFilter" onchange="applyFilters()">
+                            <option value="All">All</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Finance">Finance</option>
+                            <option value="HR">HR</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Product">Product</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Status</label>
+                        <select id="statusFilter" onchange="applyFilters()">
+                            <option value="All">All</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Project Status</label>
+                        <select id="projectStatusFilter" onchange="applyFilters()">
+                            <option value="All">All</option>
+                            <option value="Active">Active</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="sorting">
+                    <label>Sort By</label>
+
+                    <select id="sortField" onchange="applyFilters()">
+                        <option value="name">Employee Name</option>
+                        <option value="projects">Number of Projects</option>
+                        <option value="joiningDate">Joining Date</option>
+                        <option value="status">Status</option>
+                    </select>
+
+                    <button id="sortOrder" onclick="changeSortOrder()">↑ Ascending</button>
+                </div>
+
+                <div id="loading" class="message">
+                    Loading employees...
+                </div>
+
+                <div id="errorMessage" class="message error">
+                    Something went wrong while loading employees.
+                    <button onclick="loadEmployees()">Retry</button>
+                </div>
+
+                <div id="emptyMessage" class="message">
+                    No employees found.
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Projects</th>
+                                <th>Joining Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="employeeTableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <div>
+                        <label>Employees Per Page</label>
+
+                        <select id="itemsPerPage" onchange="changeItemsPerPage()">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                        </select>
+                    </div>
+
+                    <div class="pagination-buttons">
+                        <button onclick="previousPage()">Previous</button>
+                        <span id="pageNumbers"></span>
+                        <button onclick="nextPage()">Next</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Employee Details</h2>
+                <button onclick="closeModal('detailsModal')">×</button>
+            </div>
+
+            <div id="employeeDetails"></div>
+        </div>
+    </div>
+
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="formTitle">Add Employee</h2>
+                <button onclick="closeModal('employeeModal')">×</button>
+            </div>
+
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="name">
+                    <small id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email">
+                    <small id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input type="text" id="mobile">
+                    <small id="mobileError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Department</label>
+                    <select id="department">
+                        <option value="">Select Department</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Finance">Finance</option>
+                        <option value="HR">HR</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Product">Product</option>
+                    </select>
+                    <small id="departmentError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Joining Date</label>
+                    <input type="date" id="joiningDate">
+                    <small id="joiningDateError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="status">
+                        <option value="">Select Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <small id="statusError"></small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="closeModal('employeeModal')">Cancel</button>
+                    <button type="submit" class="save-btn">Save Employee</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content small-modal">
+            <div class="modal-header">
+                <h2>Delete Employee</h2>
+                <button onclick="closeModal('deleteModal')">×</button>
+            </div>
+
+            <p>Are you sure you want to delete this employee?</p>
+
+            <div class="form-actions">
+                <button class="cancel-btn" onclick="closeModal('deleteModal')">Cancel</button>
+                <button class="delete-btn" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>
