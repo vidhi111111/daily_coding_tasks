@@ -112,5 +112,60 @@ Then it delete the user.
 
 This task helped me understand how JavaScript arrays and objects can be used with DOM manipulation to create dynamic user interfaces. I also practiced implementing search, edit, and delete functionality using JavaScript.
 
+# DAY - 4
+
+# User Management Page
+
+## Task Overview
+
+Created a User Management Page using HTML, CSS, and JavaScript. The main focus was understanding API integration and handling user data dynamically on the frontend.
+
+## Functionality Implemented
+
+* Fetched user data using JavaScript `fetch()`.
+* Added loading, success, error, retry, and empty states.
+* Implemented search by user name and email.
+* Added role-based filtering.
+* Implemented sorting by Name A-Z, Name Z-A, Newest, and Oldest.
+* Added pagination for displaying users page by page.
+* Dynamically updated the table based on search, filter, sorting, and pagination.
+
+## My Understanding
+
+Through this task, I understood how frontend applications communicate with APIs and process API responses. I also learned how `filter()`, `sort()`, and `slice()` can be used to search, filter, sort, and paginate API data before displaying it in the UI.
+
+
+# DAY - 5
+
+# Employee Management Dashboard
+
+## Task Overview
+
+Built a responsive Employee Management Dashboard using HTML, CSS, and JavaScript. The application uses JSON Server as a local REST API for managing employee and project data.
+
+## Functionality Implemented
+
+* Created dynamic dashboard statistics for employees and projects.
+* Added employee table with department, projects, status, and actions.
+* Implemented search by name and email.
+* Added department, employee status, and project status filters.
+* Implemented sorting by name, projects, joining date, and status.
+* Added pagination with 10 employees per page.
+* Added employee details modal.
+* Implemented Add, Edit, and Delete employee functionality.
+* Added frontend form validation.
+* Implemented project assignment with individual project status.
+* Added API operations using GET, POST, PUT, and DELETE.
+* Added loading, error, empty, and retry states.
+* Made the dashboard responsive for desktop, tablet, and mobile.
+
+## API Integration
+
+Used JSON Server to create a local REST API with employee and project data. The frontend communicates with the API for fetching, creating, updating, and deleting employee records.
+
+## My Understanding
+
+This was my first practical experience with JSON Server and helped me understand how frontend applications communicate with REST APIs. I also understood how CRUD operations, API handling, search, filters, sorting, pagination, and dynamic UI updates work together in an application.
+
 
 
